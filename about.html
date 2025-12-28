@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Harvest + Hearth</title>
+
+  <!-- Resource hints for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { sand: '#F4EFE6', earth: '#8B6A4F' }, fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'ui-sans-serif', 'system-ui'] } } } }
+  </script>
+  <meta name="description" content="About Harvest + Hearth — Our story, values, and the team behind the food.">
+</head>
+<body class="font-sans bg-sand text-gray-800 antialiased min-h-screen flex flex-col">
+
+  <!-- Shared header -->
+  <div data-include="includes/header.html"></div>
+
+  <main class="flex-1">
+    <!-- HERO / Brand Intro -->
+    <section class="relative">
+      <div class="h-60 md:h-96 bg-cover bg-center rounded-b-xl" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1650&fm=webp&auto=compress&fit=crop&crop=entropy');">
+        <div class="h-full w-full bg-gradient-to-b from-black/10 to-sand/50 flex items-center">
+          <div class="max-w-5xl mx-auto px-5 md:px-8 text-white">
+            <h1 class="font-serif text-3xl md:text-5xl">Our Story</h1>
+            <p class="mt-3 md:mt-4 text-sm md:text-lg text-white/90">Harvest + Hearth began with a simple idea: gather people around seasonal food prepared with care. We craft menus and moments that honor ingredients, producers, and warm hospitality.</p>
+            <div class="mt-4 flex gap-3">
+              <button class="book-btn px-4 py-2 bg-earth text-white rounded-md">Book a Chef</button>
+              <a href="contact.html" class="px-4 py-2 bg-white/90 text-earth rounded-md">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand narrative -->
+    <section class="max-w-4xl mx-auto px-5 md:px-8 py-12">
+      <h2 class="font-serif text-2xl">Craft, seasonality, and care</h2>
+      <p class="mt-4 text-gray-600">We source produce from small farms, preserve what we can, and build menus that shift with the seasons. Our approach is rooted in restraint — highlighting ingredients rather than overwhelming them. Whether the occasion is an intimate dinner or a summer feast, our goal is to make thoughtful food feel effortless.</p>
+      <p class="mt-4 text-gray-600">We make many things in small batches — conserves, granola, and pickled goods — so you can bring a little of our table home with you.</p>
+    </section>
+
+    <!-- Values / Pillars -->
+    <section class="bg-white/60 py-12">
+      <div class="max-w-6xl mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow">
+          <h3 class="font-semibold">Seasonal Sourcing</h3>
+          <p class="text-sm mt-2 text-gray-600">We work with farms and artisans to select produce at its peak.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow">
+          <h3 class="font-semibold">Small-Batch Craft</h3>
+          <p class="text-sm mt-2 text-gray-600">Preservation and technique amplify flavor and shelf-life.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow">
+          <h3 class="font-semibold">Thoughtful Hospitality</h3>
+          <p class="text-sm mt-2 text-gray-600">We prioritize clarity, warmth, and calm service in every event.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="max-w-6xl mx-auto px-5 md:px-8 py-12">
+      <h2 class="font-serif text-2xl">The Team</h2>
+      <p class="mt-3 text-sm text-gray-600">A small team of cooks, producers, and organizers.</p>
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-4 shadow text-center">
+          <img loading="lazy" width="112" height="112" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&fm=webp&auto=compress&fit=crop&crop=entropy" alt="Chef portrait" class="w-28 h-28 rounded-full mx-auto object-cover" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+          <h4 class="mt-3 font-semibold">Head Chef</h4>
+          <p class="text-sm text-gray-600">Seasonal menus & creative direction</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 shadow text-center">
+          <img loading="lazy" width="112" height="112" src="https://images.unsplash.com/photo-1545996124-1b9e0d3f6c5e?q=80&w=400&fm=webp&auto=compress&fit=crop&crop=entropy" alt="Team member" class="w-28 h-28 rounded-full mx-auto object-cover" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+          <h4 class="mt-3 font-semibold">Operations</h4>
+          <p class="text-sm text-gray-600">Logistics, events, and client care</p>
+        </div>
+        <div class="bg-white rounded-xl p-4 shadow text-center">
+          <img loading="lazy" width="112" height="112" src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=400&fm=webp&auto=compress&fit=crop&crop=entropy" alt="Team member" class="w-28 h-28 rounded-full mx-auto object-cover" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+          <h4 class="mt-3 font-semibold">Preserves & Pantry</h4>
+          <p class="text-sm text-gray-600">Small-batch pantry production</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Press / Testimonials -->
+    <section class="bg-white/60 py-12">
+      <div class="max-w-6xl mx-auto px-5 md:px-8 text-center">
+        <h2 class="font-serif text-2xl">In the press</h2>
+        <p class="mt-4 text-sm text-gray-600">Featured in local culinary columns and seasonal roundups. (Placeholder content)</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="max-w-6xl mx-auto px-5 md:px-8 py-12">
+      <div class="bg-earth text-white rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <h3 class="font-serif text-2xl">Work with us</h3>
+          <p class="text-sm mt-2">We're available for private dinners, catering, and workshops. Tell us about your event and we'll craft something memorable.</p>
+        </div>
+        <div class="flex gap-3">
+          <button class="book-btn px-5 py-3 bg-white text-earth rounded-md">Request Booking</button>
+          <a href="contact.html" class="px-5 py-3 border rounded-md text-white/90">Contact</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared modals & footer -->
+  <div data-include="includes/modals.html"></div>
+  <div data-include="includes/footer.html"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

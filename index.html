@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Harvest + Hearth — Seasonal Menus & Chef Services</title>
+
+    <!-- Resource hints for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts: Playfair Display (serif) for headings, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Preload hero background to improve LCP -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1650&fm=webp&auto=compress&fit=crop&crop=entropy">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind config: extend colors and fonts
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sand: '#F4EFE6',
+                        earth: '#8B6A4F',
+                        moss: '#6B8A67'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <meta name="description" content="Harvest + Hearth: Seasonal chef-led dinners, catering, workshops, and small-batch pantry goods. Book a private chef or shop our pantry.">
+</head>
+<body class="font-sans bg-sand text-forest leading-normal text-gray-800 antialiased">
+
+    <!-- Page wrapper -->
+    <div class="min-h-screen flex flex-col">
+
+        <!-- Shared header (loaded via JS) -->
+        <div data-include="includes/header.html"></div>
+
+        <!-- Main content -->
+        <main class="flex-1">
+
+            <!-- HERO -->
+            <section class="relative">
+                <div class="h-[65vh] md:h-[72vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1650&fm=webp&auto=compress&fit=crop&crop=entropy');">
+                    <!-- overlay -->
+                    <div class="h-full w-full bg-gradient-to-b from-black/20 to-sand/40 flex items-center">
+                        <div class="max-w-5xl mx-auto px-5 md:px-8 text-white">
+                            <div class="md:w-2/3 lg:w-1/2">
+                                <h1 class="font-serif text-4xl md:text-6xl leading-tight mb-4 drop-shadow">Seasonal menus crafted for memorable gatherings</h1>
+                                <p class="mb-6 text-base md:text-lg text-white/90">From intimate chef-led dinners to curated pantry staples — we bring thoughtful flavor and timeless hospitality to your table.</p>
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <button id="heroBookBtn" class="px-5 py-3 bg-earth rounded-md text-white font-medium hover:translate-y-[-2px] transition">Book a Chef</button>
+                                    <a href="shop.html" class="px-5 py-3 bg-white/90 text-earth rounded-md font-medium hover:shadow transition">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICES PREVIEW -->
+            <section id="services" class="scroll-mt-24 max-w-6xl mx-auto px-5 md:px-8 py-12">
+                <div class="text-center mb-8">
+                    <h2 class="font-serif text-3xl">Our Services</h2>
+                    <p class="text-gray-600 mt-2">Chef-led dinners, catering, and workshops — tailored to your event.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <article class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
+                        <img loading="lazy" width="1200" height="176" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&fm=webp&auto=compress&fit=crop&crop=entropy" alt="Private chef dinner at a home gathering" class="h-40 w-full rounded-md object-cover mb-4" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+                        <h3 class="font-semibold">Private Dinners</h3>
+                        <p class="text-sm text-gray-600 mt-2">Intimate, chef-curated multi-course menus in your home or private venue.</p>
+                        <div class="mt-4 flex gap-3">
+                            <button class="book-btn px-4 py-2 bg-earth text-white rounded-md">Book Now</button>
+                            <a href="#" class="text-sm text-gray-500 underline">Learn more</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
+                        <img loading="lazy" width="1200" height="176" src="https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=1200&fm=webp&auto=compress&fit=crop&crop=entropy" alt="Event catering setup with plated service" class="h-40 w-full rounded-md object-cover mb-4" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+                        <h3 class="font-semibold">Catering</h3>
+                        <p class="text-sm text-gray-600 mt-2">Seasonal menus and service styles for gatherings, corporate events, and celebrations.</p>
+                        <div class="mt-4 flex gap-3">
+                            <button class="book-btn px-4 py-2 bg-earth text-white rounded-md">Book Now</button>
+                            <a href="#" class="text-sm text-gray-500 underline">Request a quote</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
+                        <img loading="lazy" width="1200" height="176" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&fm=webp&auto=compress&fit=crop&crop=entropy" alt="Hands-on culinary workshop class" class="h-40 w-full rounded-md object-cover mb-4" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+                        <h3 class="font-semibold">Workshops & Classes</h3>
+                        <p class="text-sm text-gray-600 mt-2">Hands-on classes for home cooks, seasonal pantry building, and technique focus.</p>
+                        <div class="mt-4 flex gap-3">
+                            <button class="book-btn px-4 py-2 bg-earth text-white rounded-md">Book Now</button>
+                            <a href="#" class="text-sm text-gray-500 underline">Upcoming sessions</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- FEATURED DISHES / PRODUCTS -->
+            <section id="featured" class="bg-white/60 py-12">
+                <div class="max-w-6xl mx-auto px-5 md:px-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="font-serif text-2xl">Featured</h2>
+                        <a href="shop.html" class="text-sm text-earth underline">View shop</a>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Product card example -->
+                        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                              <img loading="lazy" width="1200" height="224" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&fm=webp&auto=compress&fit=crop&crop=entropy" alt="Jar of preserved citrus marmalade" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+                            <div class="p-4">
+                                <h3 class="font-semibold">Preserved Citrus Marmalade</h3>
+                                <p class="text-sm text-gray-600 mt-2">Handmade in small batches — bright, balanced, and pantry-ready.</p>
+                                <div class="mt-4 flex items-center justify-between">
+                                    <span class="font-medium text-earth">$12</span>
+                                    <button class="buy-btn px-3 py-2 bg-earth text-white rounded-md">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                              <img loading="lazy" width="1200" height="224" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=1200&fm=webp&auto=compress&fit=crop&crop=entropy" alt="Bag of toasted grain granola with dried fruit" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+                            <div class="p-4">
+                                <h3 class="font-semibold">Toasted Grain Granola</h3>
+                                <p class="text-sm text-gray-600 mt-2">Nutty clusters with warm spices and dried stone fruit.</p>
+                                <div class="mt-4 flex items-center justify-between">
+                                    <span class="font-medium text-earth">$9</span>
+                                    <button class="buy-btn px-3 py-2 bg-earth text-white rounded-md">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+                              <img loading="lazy" width="1200" height="224" class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&fm=webp&auto=compress&fit=crop&crop=entropy" alt="Seasonal chef's tasting experience" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+                            <div class="p-4">
+                                <h3 class="font-semibold">Seasonal Chef's Tasting</h3>
+                                <p class="text-sm text-gray-600 mt-2">A 7-course tasting highlighting local producers.</p>
+                                <div class="mt-4 flex items-center justify-between">
+                                    <span class="font-medium text-earth">$120</span>
+                                    <button class="buy-btn px-3 py-2 bg-earth text-white rounded-md">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BRAND PHILOSOPHY -->
+            <section class="max-w-6xl mx-auto px-5 md:px-8 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="font-serif text-3xl">Our Philosophy</h2>
+                        <p class="mt-4 text-gray-600">We center our menus around seasonal sourcing, thoughtful technique, and a sense of place. Each event is designed to showcase ingredients with restraint and warmth.</p>
+                        <ul class="mt-4 text-sm text-gray-600 space-y-2">
+                            <li>• Seasonal & local sourcing</li>
+                            <li>• Small-batch preparations</li>
+                            <li>• Thoughtful presentation, minimal waste</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img loading="lazy" width="1200" height="256" src="https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=1200&fm=webp&auto=compress&fit=crop&crop=entropy" alt="Seasonal market ingredients spread" class="rounded-xl shadow-lg object-cover w-full h-64" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIALS -->
+            <section class="bg-white/60 py-12">
+                <div class="max-w-6xl mx-auto px-5 md:px-8">
+                    <h2 class="font-serif text-2xl mb-6">What People Say</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <blockquote class="bg-white rounded-lg p-6 shadow">
+                            <p class="text-gray-700">“The team at Harvest + Hearth turned our anniversary into something really special — the food, the timing, everything was effortless.”</p>
+                            <footer class="mt-4 text-sm text-gray-600">— L. Harrington</footer>
+                        </blockquote>
+                        <blockquote class="bg-white rounded-lg p-6 shadow">
+                            <p class="text-gray-700">“Exceptional flavors and a warm presence — our guests are still talking about the meal.”</p>
+                            <footer class="mt-4 text-sm text-gray-600">— The Martin Group</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NEWSLETTER SIGN-UP -->
+                    <section class="max-w-6xl mx-auto px-5 md:px-8 py-12">
+                <div class="bg-earth text-white rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div>
+                        <h2 class="font-serif text-2xl">Join the harvest list</h2>
+                        <p class="text-sm mt-2">Be first to know about new products, pop-ups, and seasonal menus.</p>
+                    </div>
+                    <form id="newsletterForm" class="flex gap-3 w-full md:w-auto">
+                        <label for="newsletterEmail" class="sr-only">Email</label>
+                        <input id="newsletterEmail" type="email" placeholder="you@domain.com" required class="px-4 py-2 rounded-md text-earth focus:outline-none" />
+                        <button type="submit" class="px-4 py-2 bg-white rounded-md font-medium">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Shared footer (loaded via JS) -->
+        <div data-include="includes/footer.html"></div>
+
+    </div>
+
+    <!-- Shared modals (loaded via JS) -->
+    <div data-include="includes/modals.html"></div>
+
+    <!-- Load minified, deferred JS -->
+    <script src="js/main.min.js" defer></script>
+</body>
+</html>
