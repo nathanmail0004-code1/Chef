@@ -1,0 +1,76 @@
+<!-- Shared modals partial: Booking + Checkout -->
+<!-- Booking Modal -->
+<div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="bg-white rounded-xl max-w-lg w-full p-6 mx-4">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Book a Chef</h3>
+      <button class="modal-close text-gray-500" aria-label="Close">✕</button>
+    </div>
+    <form id="bookingForm" class="mt-4 grid grid-cols-1 gap-3">
+      <label class="text-sm">Name <span class="text-red-500">*</span>
+        <input type="text" name="name" required class="w-full mt-1 px-3 py-2 border rounded" />
+      </label>
+      <label class="text-sm">Email <span class="text-red-500">*</span>
+        <input type="email" name="email" required class="w-full mt-1 px-3 py-2 border rounded" />
+      </label>
+      <label class="text-sm">Service Type
+        <select name="service" class="w-full mt-1 px-3 py-2 border rounded">
+          <option>Private Dinner</option>
+          <option>Catering</option>
+          <option>Workshop</option>
+        </select>
+      </label>
+      <label class="text-sm">Date <span class="text-red-500">*</span>
+        <input type="date" name="date" required class="w-full mt-1 px-3 py-2 border rounded" />
+      </label>
+      <div class="flex items-center justify-end gap-3 mt-2">
+        <button type="button" class="modal-close px-4 py-2 rounded border">Cancel</button>
+        <button type="submit" class="px-4 py-2 bg-earth text-white rounded">Request Booking</button>
+      </div>
+      <p id="bookingFeedback" class="text-sm text-red-500 mt-1 hidden"></p>
+    </form>
+  </div>
+</div>
+
+<!-- Checkout Modal -->
+<div id="checkoutModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="bg-white rounded-xl max-w-md w-full p-6 mx-4">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Checkout</h3>
+      <button class="modal-close text-gray-500" aria-label="Close">✕</button>
+    </div>
+    <div class="mt-4">
+      <p class="text-sm text-gray-600">This is a demo checkout. No real payment is processed.</p>
+
+      <!-- Product summary populated by JS -->
+      <div class="mt-4 border rounded p-3 bg-gray-50">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm text-gray-500">Item</p>
+            <p id="checkoutProductTitle" class="font-medium">—</p>
+          </div>
+          <div class="text-right">
+            <p class="text-sm text-gray-500">Price</p>
+            <p id="checkoutProductPrice" class="font-medium">—</p>
+          </div>
+        </div>
+      </div>
+
+      <form id="checkoutForm" class="mt-4 grid grid-cols-1 gap-3">
+        <input type="hidden" name="productName" id="checkoutProductInput" />
+        <input type="hidden" name="amount" id="checkoutAmountInput" />
+        <label class="text-sm">Name <span class="text-red-500">*</span>
+          <input type="text" name="checkoutName" required class="w-full mt-1 px-3 py-2 border rounded" />
+        </label>
+        <label class="text-sm">Email <span class="text-red-500">*</span>
+          <input type="email" name="checkoutEmail" required class="w-full mt-1 px-3 py-2 border rounded" />
+        </label>
+        <div class="flex items-center justify-end gap-3 mt-2">
+          <button type="button" class="modal-close px-4 py-2 rounded border">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-earth text-white rounded">Place Order</button>
+        </div>
+        <p id="checkoutFeedback" class="text-sm text-red-500 mt-1 hidden"></p>
+      </form>
+    </div>
+  </div>
+</div>
